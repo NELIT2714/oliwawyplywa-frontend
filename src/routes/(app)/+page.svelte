@@ -1,0 +1,1 @@
+<h1 class="bg">This is landing page</h1>
