@@ -1,1 +1,3 @@
-<h1 class="bg">This is landing page</h1>
+<svelte:head>
+    <title>OliwaWypływa</title>
+</svelte:head>
