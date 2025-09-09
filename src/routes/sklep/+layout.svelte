@@ -7,10 +7,7 @@ import Menu from '$lib/components/shop/Menu.svelte';
 import "$lib/context/styles/app.css";
 import InfoBannerShop from "$lib/components/shop/InfoBannerShop.svelte";
 import TopProducts from '../../lib/components/+TopProducts.svelte';
-	import StarterPack from '../../lib/components/+StarterPack.svelte';
-import Slider from "$lib/components/shop/Slider.svelte";
-
-
+import StarterPack from '../../lib/components/+StarterPack.svelte';
 
 </script>
 <InfoBannerShop />
@@ -21,6 +18,5 @@ import Slider from "$lib/components/shop/Slider.svelte";
 
 <main class="">
 	<slot />
-
 </main>
 

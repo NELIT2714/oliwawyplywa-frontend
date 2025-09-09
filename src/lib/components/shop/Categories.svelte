@@ -28,7 +28,7 @@
 <section
 	id="category"
 	class="w-screen min-h-[600px] p-6 flex flex-col"
- style="background:url('/images/bgoliwa.png') no-repeat center center;
+	style="background:url('/images/bgoliwa.png') no-repeat center center;
     background-size: cover;">
 	<h1 class="text-2xl sm:text-3xl md:text-4xl font-gothic font-bold text-center text-white bg uppercase text-blue-800 mt-8 mb-20">
 		Kategorie produktów
@@ -50,9 +50,3 @@
 
 
 </section>
-
-
-
-
-
-

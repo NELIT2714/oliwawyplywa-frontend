@@ -18,6 +18,7 @@ export async function load({ params }) {
 			description: "Wysoka jakość, smak śródziemnomorski.",
 			category: "extra",
 			image: "https://via.placeholder.com/300x200?text=Oliwa+2",
+			price: 29.99,
 		},
 		{
 			id: 3,
@@ -25,6 +26,7 @@ export async function load({ params }) {
 			description: "Do smażenia i gotowania.",
 			category: "extra",
 			image: "https://via.placeholder.com/300x200?text=Classic",
+			price: 29.99,
 		},
 		{
 			id: 4,
@@ -53,6 +55,7 @@ export async function load({ params }) {
 			description: "Wysoka jakość, smak śródziemnomorski.",
 			category: "premium",
 			image: "https://via.placeholder.com/300x200?text=Oliwa+2",
+			price: 29.99,
 		},
 		{
 			id: 3,
@@ -60,6 +63,7 @@ export async function load({ params }) {
 			description: "Do smażenia i gotowania.",
 			category: "extra",
 			image: "https://via.placeholder.com/300x200?text=Classic",
+			price: 29.99,
 		},
 		{
 			id: 4,

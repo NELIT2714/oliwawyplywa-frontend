@@ -30,11 +30,21 @@
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 		{#each data.products as product}
 			<div class="bg-white border rounded-xl shadow p-4 flex flex-col">
-				<img
-					src={product.image}
-					alt={product.name}
-					class="w-full h-40 object-cover rounded mb-2"
-				/>
+<!--				<img-->
+<!--					src={product.image}-->
+<!--					alt={product.name}-->
+<!--					class="w-full h-40 object-cover rounded mb-2"-->
+<!--				/>-->
+
+				<a href={`/product/${product.id}`}>
+					<img
+						src={product.image}
+						alt={product.name}
+						class="w-full h-40 object-cover rounded mb-2 cursor-pointer"
+					/>
+				</a>
+
+
 				<h2 class="text-lg font-semibold mb-1">{product.name}</h2>
 				<p class="text-sm text-gray-600 flex-1">{product.description}</p>
 				<p class="text-sm text-gray-600 flex-1">{product.price}</p>
