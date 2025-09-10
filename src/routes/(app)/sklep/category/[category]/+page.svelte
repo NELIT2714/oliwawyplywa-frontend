@@ -22,7 +22,7 @@
 		setTimeout(() => (added[product.id] = false), 3000);
 	}
 </script>
-<Menu />
+<!--<Menu />-->
 
 <h1 class="text-2xl font-bold mt-6 mb-4">Kategoria: {data.category.toUpperCase()}</h1>
 

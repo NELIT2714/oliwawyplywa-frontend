@@ -15,7 +15,7 @@
 
 </script>
 
-<InfoBanner />
+
 <Header />
 
 <main class="">

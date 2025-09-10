@@ -1,9 +1,14 @@
 <script>
+	import InfoBanner from "$lib/components/+infoBanner.svelte";
+
 	let isOpen = false;
 </script>
 
-<header class="fixed top-11 w-full bg-white border-b border-gray-300 p-4 md:h-20 z-40">
+<div class="font-roboto text-white text-center py-3 flex flex-col md:flex-row justify-center items-center w-full bg-[#a57c0c]">
+	<p class="text-sm text-center ">Zakupy powyżej 350 PLN - dostawa gratis!</p>
+</div>
 
+<header class="w-full bg-white border-b border-gray-300 p-4">
 	<div class="container mx-auto flex items-center justify-between md:px-52 mt-2">
 
 		<!-- Lewa sekcja: MENU (desktop) -->
