@@ -12,7 +12,7 @@
         position: relative;
         width: 13rem;
         height: 13rem;
-        background-image: url('/images/drop.svg');
+        /*background-image: url('/images/drop.svg');*/
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -47,7 +47,7 @@
 				<!-- Kontener na obrazek z tłem -->
 				<div class="image-container">
 					<img src={product.image} alt={product.name} />
-					<img src="/images/drop.svg" class="absolute top-0 left-0 w-full h-full pointer-events-none" />
+<!--					<img src="/images/drop.svg" class="absolute top-0 left-0 w-full h-full pointer-events-none" />-->
 				</div>
 
 				<p class="mt-3 font-semibold font-gothic" style="color: #253faa">{product.name}</p>

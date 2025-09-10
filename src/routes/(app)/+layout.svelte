@@ -14,19 +14,13 @@
 
 
 </script>
+
 <InfoBanner />
 <Header />
-<HeroImage />
-<InfoBanner2 />
-<FaqSection />
-<TopProducts />
-<About />
-<Podcasts />
-<StarterPack />
-<Footer />
 
 <main class="">
 	<slot />
-
 </main>
+
+<Footer />
 

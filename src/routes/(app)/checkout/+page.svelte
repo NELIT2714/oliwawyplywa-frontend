@@ -1,5 +1,5 @@
 <script>
-	import { cart } from '$lib/stores/cart';
+	import { cart } from '$lib/stores/cart.js';
 	import { goto } from '$app/navigation';
 
 	let name = '';
@@ -24,7 +24,7 @@
 	<h1 class="text-2xl font-bold mb-6">Dostawa i płatność</h1>
 
 	{#if $cart.length === 0}
-		<p>Koszyk jest pusty. <a href="/" class="text-blue-600 underline">Wróć do sklepu</a>.</p>
+		<p>Koszyk jest pusty. <a href="/static" class="text-blue-600 underline">Wróć do sklepu</a>.</p>
 	{:else}
 		<h2 class="text-xl font-semibold mb-4">Podsumowanie zamówienia</h2>
 		<ul class="mb-6">

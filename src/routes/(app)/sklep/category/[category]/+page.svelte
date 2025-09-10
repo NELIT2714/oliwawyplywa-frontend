@@ -2,7 +2,7 @@
 <script>
 	import Menu from '$lib/components/shop/Menu.svelte'; // Zmień ścieżkę jeśli inna
 	export let data;
-	import { cart } from '$lib/stores/cart';
+	import { cart } from '$lib/stores/cart.js';
 
 
 

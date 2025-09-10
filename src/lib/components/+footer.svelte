@@ -1,8 +1,8 @@
-<footer class="bg-blue-900 text-white py-10 px-6">
+<footer id="#kontakt" class="bg-blue-900 text-white py-10 px-6">
 	<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 
 		<!-- Sekcja kontaktowa -->
-		<div>
+		<div id="kontakt">
 			<h3 class="text-xl font-bold mb-4 uppercase tracking-wider font-gothic">Kontakt</h3>
 			<p class="mb-2">Oliwa Wypływa</p>
 			<p class="mb-2">ul. Mielizny 15 lok. 1</p>

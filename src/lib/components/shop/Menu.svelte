@@ -62,17 +62,17 @@
 
 				{#if showDropdown}
 					<div class="absolute top-full mt-2 left-0 w-48 bg-white border border-gray-300 shadow-lg rounded z-50">
-						<a href="/category/extra" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">EXTRA VIRGIN</a>
-						<a href="/category/premium" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">ESENCJA PREMIUM</a>
-						<a href="/category/smakowa" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">OLIWA SMAKOWA</a>
-						<a href="/category/boxy" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">BOXY PREZENTOWE</a>
+						<a href="/sklep/category/" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">EXTRA VIRGIN</a>
+						<a href="/sklep/category/" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">ESENCJA PREMIUM</a>
+						<a href="/sklep/category/" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">OLIWA SMAKOWA</a>
+						<a href="/sklep/category/" class="block px-4 py-2 hover:bg-blue-50 text-blue-700">BOXY PREZENTOWE</a>
 					</div>
 				{/if}
 			</div>
 
 			<a href="/rules" class="text-blue-600 hover:underline">REGULAMIN SKLEPU</a>
 			<a href="/privacy" class="text-blue-600 hover:underline">POLITYKA PRYWATNOŚCI</a>
-			<a href="/contact" class="text-blue-600 hover:underline">KONTAKT</a>
+			<a href="#kontakt" class="text-blue-600 hover:underline">KONTAKT</a>
 		</nav>
 
 
@@ -129,8 +129,8 @@
 
 			<a href="/rules" class="block hover:text-blue-600" on:click={() => isOpen = false}>REGULAMIN SKLEPU</a>
 			<a href="/privacy" class="block hover:text-blue-600" on:click={() => isOpen = false}>POLITYKA PRYWATNOŚCI</a>
-			<a href="/sklep/#top" class="block hover:text-blue-600" on:click={() => isOpen = false}>NASZ TOP</a>
-			<a href="/sklep/#starter" class="block hover:text-blue-600" on:click={() => isOpen = false}>ZESTAW STARTOWY</a>
+			<a href="/(app)/sklep/#top" class="block hover:text-blue-600" on:click={() => isOpen = false}>NASZ TOP</a>
+			<a href="/(app)/sklep/#starter" class="block hover:text-blue-600" on:click={() => isOpen = false}>ZESTAW STARTOWY</a>
 			<a href="/contact" class="block hover:text-blue-600" on:click={() => isOpen = false}>KONTAKT</a>
 		</div>
 	{/if}

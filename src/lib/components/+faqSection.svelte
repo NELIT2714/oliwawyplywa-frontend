@@ -34,7 +34,7 @@
 	}
 </script>
 
-<section class="bg-white py-12 px-4 md:px-10 max-w-5xl mx-auto">
+<section id="faq" class="bg-white py-12 px-4 md:px-10 max-w-5xl mx-auto">
 	<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 font-gothic text-blue-900">
 		FAQ – najczęściej zadawane pytania
 	</h2>

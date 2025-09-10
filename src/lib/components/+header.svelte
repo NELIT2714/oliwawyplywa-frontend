@@ -12,8 +12,8 @@
 		<a href="/sklep" class="text-blue-600">SKLEP</a>
 			<a href="#top" class="text-blue-600">NASZ TOP</a>
 			<a href="#about" class="text-blue-600">ZBIORY</a>
-			<a href="/onas" class="text-blue-600">O NAS</a>
-			<a href="/kontakt" class="text-blue-600">KONTAKT</a>
+			<a href="#faq" class="text-blue-600">FAQ</a>
+			<a href="#kontakt" class="text-blue-600">KONTAKT</a>
 		</nav>
 
 		<!-- Hamburger (mobile) -->
@@ -51,8 +51,8 @@
 			<a href="/sklep" class="block hover:text-blue-600">SKLEP</a>
 			<a href="#top" class="block hover:text-blue-600">NASZ TOP</a>
 			<a href="#about" class="block hover:text-blue-600">ZBIORY</a>
-			<a href="/onas" class="block hover:text-blue-600">O NAS</a>
-			<a href="/kontakt" class="block hover:text-blue-600">KONTAKT</a>
+			<a href="#faq" class="block hover:text-blue-600">FAQ</a>
+			<a href="#kontakt" class="block hover:text-blue-600">KONTAKT</a>
 		</div>
 	{/if}
 </header>
