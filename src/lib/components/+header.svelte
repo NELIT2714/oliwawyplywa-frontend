@@ -1,5 +1,4 @@
 <script>
-	import InfoBanner from "$lib/components/+infoBanner.svelte";
 
 	let isOpen = false;
 </script>
