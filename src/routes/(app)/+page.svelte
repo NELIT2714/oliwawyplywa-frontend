@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-    <title>OliwaWypływa 2</title>
+    <title>OliwaWypływa</title>
 </svelte:head>
 
 <HeroImage />
