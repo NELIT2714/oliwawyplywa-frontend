@@ -13,10 +13,9 @@
 		<!-- Lewa sekcja: MENU (desktop) -->
 		<nav class="hidden md:flex gap-5 text-xs sm:text-sm font-gothic font-semibold tracking-wider">
 
-		<a href="/sklep" class="text-blue-600">SKLEP</a>
-			<a href="#top" class="text-blue-600">NASZ TOP</a>
-			<a href="#about" class="text-blue-600">ZBIORY</a>
-			<a href="#faq" class="text-blue-600">FAQ</a>
+			<a href="/" class="text-blue-600">HOME</a>
+			<a href="/sklep" class="text-blue-600">SKLEP</a>
+			<a href="/#faq" class="text-blue-600">FAQ</a>
 			<a href="#kontakt" class="text-blue-600">KONTAKT</a>
 		</nav>
 
