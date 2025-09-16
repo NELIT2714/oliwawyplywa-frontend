@@ -14,7 +14,7 @@
 		<nav class="hidden md:flex gap-5 text-xs sm:text-sm font-gothic font-semibold tracking-wider">
 
 			<a href="/" class="text-blue-600">HOME</a>
-			<a href="/sklep" class="text-blue-600">SKLEP</a>
+			<a href="/shop" class="text-blue-600">SKLEP</a>
 			<a href="/#faq" class="text-blue-600">FAQ</a>
 			<a href="#kontakt" class="text-blue-600">KONTAKT</a>
 		</nav>
@@ -51,9 +51,9 @@
 	<!-- MENU mobilne (rozwijane) -->
 	{#if isOpen}
 		<div class="md:hidden mt-4 space-y-2 text-center text-base font-medium">
-			<a href="/sklep" class="block hover:text-blue-600">SKLEP</a>
+			<a href="/shop" class="block hover:text-blue-600">SKLEP</a>
 			<a href="#top" class="block hover:text-blue-600">NASZ TOP</a>
-			<a href="#about" class="block hover:text-blue-600">ZBIORY</a>
+
 			<a href="#faq" class="block hover:text-blue-600">FAQ</a>
 			<a href="#kontakt" class="block hover:text-blue-600">KONTAKT</a>
 		</div>

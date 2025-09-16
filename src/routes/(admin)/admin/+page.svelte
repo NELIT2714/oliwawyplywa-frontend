@@ -8,7 +8,7 @@
 	};
 </script>
 
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-indigo-200 via-indigo-100 to-red-700 px-4">
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-indigo-200 via-indigo-100 to-white px-4">
 	<form
 		on:submit={handleSubmit}
 		class="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl border border-gray-200"

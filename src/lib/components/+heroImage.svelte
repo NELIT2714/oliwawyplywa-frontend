@@ -1,7 +1,10 @@
-<section class="relative h-screen w-full">
+<script>
+</script>
+
+<section class="relative h-[calc(100dvh-113px)] w-full">
 	<!-- Tło (pełnoekranowe) -->
 	<img
-		src="/images/hero.jpg"
+		src="/images/hero.webp"
 		alt="Oliwa Wypływa - zdjęcie w tle"
 		class="absolute inset-0 h-full w-full object-cover object-center"
 	/>
@@ -17,6 +20,17 @@
 		<h2 class="text-white text-lg sm:text-xl md:text-2xl mt-4 drop-shadow-md">
 			Prosto z półwyspu Kalamata
 		</h2>
+
+		<a
+			href="/shop"
+			class="px-4 py-2 border border-white text-white rounded-md
+         bg-transparent  hover:text-white transition uppercase mt-6"
+		>
+			zapraszamy do sklepu
+		</a>
+
+
+
 	</div>
 
 </section>

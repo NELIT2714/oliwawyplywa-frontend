@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>OliwaWypływa</title>
+	<title>OliwaWypływa | Sklep</title>
 </svelte:head>
 
 <Categories />
