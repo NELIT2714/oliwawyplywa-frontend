@@ -10,8 +10,8 @@
 <style>
     .image-container {
         position: relative;
-        width: 13rem;
-        height: 13rem;
+        width: 10rem;
+        height: 10rem;
         /*background-image: url('/images/drop.svg');*/
         background-repeat: no-repeat;
         background-position: center;
@@ -36,7 +36,6 @@
 </style>
 
 <section id="top" class="py-20 md:py-32 lg:pb-56 px-4 text-center" style="background-color: #f0e7db">
-
 	<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-20 font-gothic tracking-wider uppercase" style="color: #253faa">
 		Nasze topowe produkty
 	</h2>
@@ -44,10 +43,8 @@
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
 		{#each products as product}
 			<div class="flex flex-col items-center">
-				<!-- Kontener na obrazek z tłem -->
-				<div class="image-container">
+				<div class="image-container w-full aspect-square max-w-[8rem] md:max-w-[13rem] mx-auto">
 					<img src={product.image} alt={product.name} />
-<!--					<img src="/images/drop.svg" class="absolute top-0 left-0 w-full h-full pointer-events-none" />-->
 				</div>
 
 				<p class="mt-3 font-semibold font-gothic" style="color: #253faa">{product.name}</p>

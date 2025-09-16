@@ -2,7 +2,7 @@
 	export let image = '/images/top.jpg';
 	export let productName = 'Oliwa Premium Start';
 	export let description = 'Idealny pakiet na początek – poznaj naszą oliwę z najlepszych zbiorów.';
-	export let link = '/sklep/oliwa-premium-start';
+	export let link = '/shop';
 </script>
 
 <section  id="starter" class="w-full bg-[#f0eede] pt-12 pb-6 px-6">
