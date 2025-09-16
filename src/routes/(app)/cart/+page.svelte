@@ -1,10 +1,9 @@
 <script>
-	import { cart } from '$lib/stores/cart';
-	import Menu from "$lib/components/shop/Menu.svelte";
+	import { cart } from "$lib/stores/cart";
 
 
 	$: totalPrice = $cart.reduce(
-		(sum, item) => sum + (item.price || 0) * (item.quantity || 0), 0
+		(sum, item) => sum + (item.price || 0) * (item.quantity || 0), 0,
 	).toFixed(2);
 
 
@@ -14,18 +13,18 @@
 				.map(item =>
 					item.id === productId && item.quantity > 1
 						? { ...item, quantity: item.quantity - 1 }
-						: item
+						: item,
 				)
-				.filter(item => item.quantity > 0)
+				.filter(item => item.quantity > 0),
 		);
 	}
 
 	function login() {
-		goto('/account');
+		goto("/account");
 	}
 
 	function proceedToCheckout() {
-		goto('/checkout');
+		goto("/checkout");
 	}
 
 	function increaseQuantity(id) {
@@ -35,8 +34,8 @@
 						return item.id === productId && item.quantity > 1
 							? { ...item, quantity: item.quantity + 1 }
 							: item;
-					}
-				)
+					},
+				),
 			);
 		}
 
@@ -69,10 +68,11 @@
 						<span>{product.name}</span>
 					</td>
 					<td class="py-4 text-xs md:text-base">
-					{product.price.toFixed(2)} zł</td>
+						{product.price.toFixed(2)} zł
+					</td>
 					<td class="py-4 text-sm md:text-base">
 
-					<div class="flex items-center gap-2">
+						<div class="flex items-center gap-2">
 							<button
 								on:click={() => decreaseQuantity(product.id)}
 								class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
@@ -89,7 +89,8 @@
 						</div>
 					</td>
 					<td class="py-4 text-xs md:text-base">
-					{(product.price * product.quantity).toFixed(2)} zł</td>
+						{(product.price * product.quantity).toFixed(2)} zł
+					</td>
 				</tr>
 			{/each}
 			</tbody>
