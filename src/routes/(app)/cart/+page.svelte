@@ -1,123 +1,58 @@
 <script>
-	import { cart } from '$lib/stores/cart';
-	import Menu from "$lib/components/shop/Menu.svelte";
+	// przykładowe dane koszyka
+	let cart = [
+		{ id: 101, name: "Extra Virgin 250ml", price: 29.99, quantity: 1, image: "/images/extra.jpg" },
+		{ id: 202, name: "Premium Czosnkowa", price: 72.99, quantity: 2, image: "/images/smakowa.jpg" }
+	];
 
-
-	$: totalPrice = $cart.reduce(
-		(sum, item) => sum + (item.price || 0) * (item.quantity || 0), 0
-	).toFixed(2);
-
-
-	function decreaseQuantity(productId) {
-		cart.update(items =>
-			items
-				.map(item =>
-					item.id === productId && item.quantity > 1
-						? { ...item, quantity: item.quantity - 1 }
-						: item
-				)
-				.filter(item => item.quantity > 0)
-		);
+	// zmiana ilości
+	function updateQuantity(item, delta) {
+		item.quantity += delta;
+		if (item.quantity < 1) item.quantity = 1;
 	}
 
-	function login() {
-		goto('/account');
+	// usuwanie produktu z koszyka
+	function removeItem(id) {
+		cart = cart.filter(item => item.id !== id);
 	}
 
-	function proceedToCheckout() {
-		goto('/checkout');
-	}
-
-	function increaseQuantity(id) {
-		function increaseQuantity(productId) {
-			cart.update(items =>
-				items.map(item => {
-						return item.id === productId && item.quantity > 1
-							? { ...item, quantity: item.quantity + 1 }
-							: item;
-					}
-				)
-			);
-		}
-
-
-	}
+	// suma całkowita
+	$: total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 </script>
-<Menu />
 
-<section class="max-w-4xl mx-auto p-6 bg-white rounded shadow mt-5">
-	<h1 class="text-2xl font-bold mb-6 font-gothic">Twój koszyk</h1>
+<section class="max-w-5xl mx-auto p-6">
+	<h1 class="text-3xl font-bold text-blue-900 mb-8 text-center">Twój koszyk</h1>
 
-	{#if $cart.length === 0}
-		<p class="text-gray-600">Twój koszyk jest pusty.</p>
-	{:else}
-		<table class="w-full mb-6 border-collapse">
-			<thead>
-			<tr class="border-b text-left text-gray-700">
-				<th class="py-2 text-sm md:text-base">Produkt</th>
-				<th class="py-2 text-sm md:text-base">Cena</th>
-				<th class="py-2 text-sm md:text-base">Ilość</th>
-				<th class="py-2 text-sm md:text-base">Razem</th>
-			</tr>
-			</thead>
+	{#if cart.length > 0}
+		<div class="flex flex-col gap-6">
+			{#each cart as item}
+				<div class="flex flex-col md:flex-row items-center md:items-start border rounded-lg p-4 bg-white shadow-md gap-4">
+					<img src={item.image} alt={item.name} class="w-32 h-32 object-cover rounded-lg" />
+					<div class="flex-1">
+						<h2 class="text-xl font-semibold text-blue-900">{item.name}</h2>
+						<p class="text-gray-700 mb-2">Cena: {item.price} zł</p>
 
-			<tbody>
-			{#each $cart as product}
-				<tr class="border-b">
-					<td class="py-4 flex text-xs md:text-base items-center gap-4">
-						<img src={product.image} alt={product.name} class="w-16 h-16 object-cover rounded" />
-						<span>{product.name}</span>
-					</td>
-					<td class="py-4 text-xs md:text-base">
-					{product.price.toFixed(2)} zł</td>
-					<td class="py-4 text-sm md:text-base">
-
-					<div class="flex items-center gap-2">
-							<button
-								on:click={() => decreaseQuantity(product.id)}
-								class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-							>
-								−
-							</button>
-							<span>{product.quantity}</span>
-							<button
-								on:click={() => increaseQuantity(product.id)}
-								class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-							>
-								+
-							</button>
+						<div class="flex items-center gap-2 mb-2">
+							<button class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300" on:click={() => updateQuantity(item, -1)}>-</button>
+							<span class="px-2">{item.quantity}</span>
+							<button class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300" on:click={() => updateQuantity(item, 1)}>+</button>
 						</div>
-					</td>
-					<td class="py-4 text-xs md:text-base">
-					{(product.price * product.quantity).toFixed(2)} zł</td>
-				</tr>
+
+						<p class="font-bold text-blue-800">Razem: {(item.price * item.quantity).toFixed(2)} zł</p>
+					</div>
+
+					<button class="text-red-600 font-bold hover:underline mt-2 md:mt-0" on:click={() => removeItem(item.id)}>
+						Usuń
+					</button>
+				</div>
 			{/each}
-			</tbody>
-		</table>
 
-		<div class="text-right font-semibold text-lg mb-6">
-			Suma: {totalPrice} zł
+			<div class="text-right mt-4">
+				<p class="text-2xl font-bold">Łącznie: {total} zł</p>
+				<button class="mt-2 bg-blue-900 text-white py-2 px-6 rounded-lg font-semibold hover:bg-blue-800">Przejdź do płatności</button>
+			</div>
 		</div>
-
-		<div class="flex flex-col md:flex-row md:justify-between items-center gap-4">
-			<a
-				href="/account"
-				class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full md:w-auto text-center"
-			>
-				Zaloguj się
-			</a>
-
-
-			<p class="text-gray-700 text-sm md:text-base text-center md:text-left">
-				Możesz kontynuować bez logowania
-			</p>
-
-			<a
-				href="/checkout"
-				class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full md:w-auto text-center"
-			>
-				Dostawa i płatność
-			</a>
-		</div>
+	{:else}
+		<p class="text-center text-gray-700 text-xl mt-20">Twój koszyk jest pusty.</p>
 	{/if}
 </section>
