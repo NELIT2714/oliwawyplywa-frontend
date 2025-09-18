@@ -21,6 +21,27 @@
 				{ id: 203, name: "Premium Pikantna", price: 74.99, image: "/images/smakowa.jpg" },
 				{ id: 204, name: "Premium Rozmaryn", price: 76.99, image: "/images/smakowa.jpg" }
 			]
+		},
+		{
+			id: 3,
+			name: "OLIWA ESENCJA SMAKOWA",
+			link: "/category/premium",
+			products: [
+				{ id: 301, name: "Premium Ziołowa", price: 69.99, image: "/images/oliwa1.jpg" },
+				{ id: 302, name: "Premium Czosnkowa", price: 72.99, image: "/images/oliwa1.jpg" },
+				{ id: 303, name: "Premium Pikantna", price: 74.99, image: "/images/oliwa1.jpg" },
+				{ id: 304, name: "Premium Rozmaryn", price: 76.99, image: "/images/oliwa1.jpg" }
+			]
+		},
+		{
+			id: 4,
+			name: "BOXY PREZENTOWE",
+			link: "/category/premium",
+			products: [
+				{ id: 401, name: "Premium Ziołowa", price: 69.99, image: "/images/box.jpg" },
+				{ id: 402, name: "Premium Czosnkowa", price: 72.99, image: "/images/box.jpg" },
+
+			]
 		}
 		// ... analogicznie inne kategorie
 	];
