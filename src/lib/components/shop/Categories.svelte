@@ -74,16 +74,20 @@
 	<div class="flex flex-col gap-10">
 		{#each categories as category}
 			<div class="rounded-lg p-4 bg-white shadow-md">
-				<h2 class="text-xl font-semibold text-center mb-4" style="color: #a57c0c">
+				<h2 class="text-3xl font-semibold text-center mb-4 text-blue-900">
 					{category.name}
 				</h2>
 
 				<!-- produkty -->
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 					{#each category.products as product}
-						<div class="border rounded-lg p-3 flex flex-col items-center bg-gray-50">
-							<img src={product.image} alt={product.name} class="w-20 h-20 object-cover rounded-full mb-2" />
-							<p class="font-medium text-sm text-center">{product.name}</p>
+						<div class="border rounded-lg p-4 flex flex-col items-center bg-white shadow-md">
+							<img
+								src={product.image}
+								alt={product.name}
+								class="w-full h-48 object-cover rounded-lg mb-3"
+							/>
+							<p class="font-medium text-base text-center">{product.name}</p>
 							<p class="text-blue-900 font-bold">{product.price} zł</p>
 							<div class="text-center mt-4">
 								<a
@@ -96,6 +100,7 @@
 						</div>
 					{/each}
 				</div>
+
 
 				<!-- przycisk więcej -->
 
