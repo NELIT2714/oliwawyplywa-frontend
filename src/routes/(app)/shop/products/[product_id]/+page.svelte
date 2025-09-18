@@ -1,16 +1,18 @@
 <script>
 	import { page } from '$app/stores';
-	import { categories } from '$lib/data/products';
 
+	// pobranie ID produktu z URL
 	let productId;
 	$: productId = $page.url.pathname.split('/').pop();
 
-	// szukamy produktu w każdej kategorii
-	let product;
-	for (const category of categories) {
-		product = category.products.find(p => p.id == productId);
-		if (product) break;
-	}
+	// (na razie proste wyszukanie w mockowanych danych)
+	let products = [
+		{ id: 101, name: "Extra Virgin 250ml", price: 29.99, image: "/images/extra.jpg", description: "Oliwa najwyższej jakości." },
+		{ id: 102, name: "Extra Virgin 500ml", price: 49.99, image: "/images/extra.jpg", description: "Butelka 500ml idealna do kuchni." },
+		// ...reszta
+	];
+
+	let product = products.find(p => p.id == productId);
 </script>
 
 {#if product}
@@ -21,5 +23,5 @@
 		<p class="text-gray-700">{product.description}</p>
 	</section>
 {:else}
-	<p class="text-center text-red-600 mt-10">Produkt nie znaleziony</p>
+	<p class="text-center text-red-600">Nie znaleziono produktu</p>
 {/if}
