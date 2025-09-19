@@ -10,9 +10,7 @@ let categories = [
 			link: "/category/extra",
 			products: [
 				{ id: 101, name: "Extra Virgin 250ml", price: 29.99, image: "/images/extra.jpg", link: "/product/101" },
-				{ id: 102, name: "Extra Virgin 500ml", price: 49.99, image: "/images/extra.jpg", link: "/product/102" },
-				{ id: 103, name: "Extra Virgin 1L", price: 79.99, image: "/images/extra.jpg", link: "/product/103" },
-				{ id: 104, name: "Extra Virgin Premium", price: 99.99, image: "/images/extra.jpg", link: "/product/104" }
+
 			]
 		},
 		{
@@ -62,20 +60,25 @@ let categories = [
         }
     }
 
+    #category {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
 </style>
 
 <section
 	id="category"
-	class="w-screen min-h-[600px] p-6 flex flex-col"
-	style="background:url('/images/bgoliwa.png') no-repeat center center;
-    background-size: cover;">
-	<h1 class="text-2xl sm:text-3xl md:text-4xl font-gothic font-bold text-center text-white bg uppercase text-blue-800 mt-8 mb-20">
+	class="w-screen min-h-[600px] p-6 flex flex-col bg-[#f0eede]"
+	>
+	<h1 class="text-2xl sm:text-3xl md:text-4xl font-gothic font-bold text-center  bg uppercase text-blue-800 mt-8 mb-20">
 		Kategorie produktów
 	</h1>
 
 	<div class="flex flex-col gap-10">
 		{#each categories as category}
-			<div class="rounded-lg p-4 bg-white shadow-md">
+			<div class="rounded-lg p-4  shadow-md">
 				<h2 class="text-3xl font-semibold text-center mb-4 text-blue-900">
 					{category.name}
 				</h2>

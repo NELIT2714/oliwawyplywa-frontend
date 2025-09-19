@@ -3,13 +3,12 @@ import { error } from "@sveltejs/kit";
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-	const product = products.find((p) => p.id.toString() === params.id);
+	// Upewniamy się, że params.id jest liczbą
+	const product = products.find((p) => p.id === Number(params.id));
 
 	if (!product) {
-		throw error(404, "Produkt nie znaleziony");
+		throw error(404, "Produkt nie znaleziony!!!");
 	}
 
-	return {
-		product,
-	};
+	return { product };
 }

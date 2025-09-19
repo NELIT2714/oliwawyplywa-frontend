@@ -90,7 +90,7 @@
 			</div>
 		{:else}
 			<div class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
-				<h2 class="text-2xl font-bold text-blue-900 mb-4">Podaj swoje dane</h2>
+				<h2 class="text-2xl  text-blue-900 mb-4">Podaj swoje dane i adres wysyłki</h2>
 
 				<div class="flex flex-col gap-4">
 					<input type="text" placeholder="Imię i nazwisko" bind:value={name} class="border p-2 rounded w-full"/>

@@ -12,16 +12,16 @@
 		</div>
 
 		<!-- Sekcja linków -->
-		<div>
-			<h3 class="text-xl font-bold mb-4 uppercase tracking-wider font-gothics">Moje konto</h3>
-			<ul class="space-y-2">
-				<li><a href="/konto" class="hover:text-yellow-300 bg-">Moje konto</a></li>
-				<li><a href="/logowanie" class="hover:text-yellow-300">Logowanie</a></li>
-				<li><a href="/rejestracja" class="hover:text-yellow-300">Rejestracja</a></li>
-				<li><a href="/koszyk" class="hover:text-yellow-300">Koszyk</a></li>
-				<li><a href="/zamowienia" class="hover:text-yellow-300">Zamówienia</a></li>
-			</ul>
-		</div>
+<!--		<div>-->
+<!--			<h3 class="text-xl font-bold mb-4 uppercase tracking-wider font-gothics">Moje konto</h3>-->
+<!--			<ul class="space-y-2">-->
+<!--				<li><a href="/konto" class="hover:text-yellow-300 bg-">Moje konto</a></li>-->
+<!--				<li><a href="/logowanie" class="hover:text-yellow-300">Logowanie</a></li>-->
+<!--				<li><a href="/rejestracja" class="hover:text-yellow-300">Rejestracja</a></li>-->
+<!--				<li><a href="/koszyk" class="hover:text-yellow-300">Koszyk</a></li>-->
+<!--				<li><a href="/zamowienia" class="hover:text-yellow-300">Zamówienia</a></li>-->
+<!--			</ul>-->
+<!--		</div>-->
 	</div>
 
 	<!-- Dolna belka -->
