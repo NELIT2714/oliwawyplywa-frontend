@@ -1,7 +1,7 @@
 <script>
 	import { cart } from '$lib/stores/cart';
-
-
+	// import { goto } from '$app/navigation';
+	//
 	// produkt pobrany z load
 	export let data;
 	const { product } = data;
@@ -10,6 +10,7 @@
 		if (product) {
 			cart.add({ ...product });
 			alert(`${product.name} dodano do koszyka!`);
+			// goto('/cart'); // Redirect to cart page
 		}
 	}
 </script>
@@ -23,15 +24,17 @@
 				<div>
 					<h1 class="text-3xl font-bold text-blue-900 mb-4">{product.name}</h1>
 					<p class="text-xl font-semibold text-blue-800 mb-6">Cena: {product.price} zł</p>
-					<p class="text-gray-700 mb-6">Opis produktu: tu wpisz opis produktu.</p>
+					<p class="text-blue-800 font-semibold mb-6">Opis produktu: </p>
+						{product.description}
 				</div>
 
-				<button
-					class="bg-blue-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 w-full md:w-auto"
-					on:click={addToCart}
+				<a
+					href="/cart"
+					class="bg-blue-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 w-full md:w-auto inline-block text-center"
+					aria-label="Dodaj produkt do koszyka"
 				>
 					Dodaj do koszyka
-				</button>
+				</a>
 			</div>
 		</div>
 	</section>

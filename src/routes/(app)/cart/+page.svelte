@@ -89,7 +89,7 @@
 				</div>
 			</div>
 		{:else}
-			<div class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+			<div class="bg-yellow-300 p-6 rounded-lg shadow-md max-w-lg mx-auto border-blue-700">
 				<h2 class="text-2xl  text-blue-900 mb-4">Podaj swoje dane i adres wysyłki</h2>
 
 				<div class="flex flex-col gap-4">
@@ -108,7 +108,7 @@
 					<button class="bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-500" on:click={pay}>
 						Zapłać {total} zł
 					</button>
-					<button class="text-gray-700 hover:underline mt-2" on:click={() => showCheckout = false}>
+					<button class="text-white bg-lime-800 py-3 rounded-lg hover:bg-lime-500 mt-2" on:click={() => showCheckout = false}>
 						Wróć do koszyka
 					</button>
 				</div>

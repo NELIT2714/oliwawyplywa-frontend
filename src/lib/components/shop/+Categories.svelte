@@ -1,7 +1,7 @@
 
 
 <script>
-
+import {products} from "$lib/stores/products.js";
 
 let categories = [
 		{
@@ -96,8 +96,8 @@ let categories = [
 							<p class="text-blue-900 font-bold">{product.price} zł</p>
 							<div class="text-center mt-4">
 								<a
-									href={product.link}
-									class="inline-block border border-blue-950 hover:bg-blue-800 hover:text-white bg-blue-900 text-white py-2 px-4 rounded-lg uppercase tracking-wide font-semibold text-xs sm:text-sm"
+									href={product.slug}
+									class="inline-block border border-blue-950 hover:bg-blue-300 hover:text-white bg-blue-900 text-white py-2 px-4 rounded-lg uppercase tracking-wide font-semibold text-xs sm:text-sm"
 								>
 									więcej opcji
 								</a>

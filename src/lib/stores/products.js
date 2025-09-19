@@ -16,5 +16,13 @@ export const products = [
 		image: "/images/smakowa.jpg",
 		description: "Ekologiczna oliwa BIO z dodatkiem naturalnych aromatów.",
 	},
+	{
+		id: 2,
+		name: "BOX PREZENTOWY",
+		slug: "box-prezentowy",
+		price: 69.99,
+		image: "/images/smakowa.jpg",
+		description: "Ekologiczna oliwa BIO z dodatkiem naturalnych aromatów.",
+	},
 	// ...więcej produktów
 ];
