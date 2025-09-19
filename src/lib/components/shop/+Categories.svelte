@@ -2,6 +2,7 @@
 
 <script>
 
+
 let categories = [
 		{
 			id: 1,

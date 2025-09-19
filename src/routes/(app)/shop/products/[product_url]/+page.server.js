@@ -1,4 +1,4 @@
-// src/routes/shop/products/[product_id]/+page.server.js
+// src/routes/shop/products/[product_url]/+page.server.js
 import { error } from "@sveltejs/kit";
 
 /** @type {import('./$types').PageServerLoad} */
